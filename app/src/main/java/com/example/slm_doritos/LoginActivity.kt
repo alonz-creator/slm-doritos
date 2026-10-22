@@ -43,6 +43,11 @@ class LoginActivity : AppCompatActivity() {
                     .show()
             }
         }
+
+        binding.btnRegisterNav.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
