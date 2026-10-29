@@ -1,8 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme -->
-    <style name="Base.Theme.SLM_Doritos" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.SLM_Doritos" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/gold_primary</item>
-        <item name="colorPrimaryVariant">@color/gold_dark</item>
         <item name="colorOnPrimary">@color/bg_dark</item>
         <item name="android:windowBackground">@color/bg_dark</item>
         <item name="android:textColorPrimary">@color/text_white</item>

@@ -77,6 +77,18 @@
                 android:textColor="@color/bg_dark"
                 android:textStyle="bold" />
 
+            <!-- peletakan tombol toggle switch -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/card_dark"
+                android:padding="16dp"
+                android:text="Dark Mode"
+                android:textColor="@color/text_white"
+                android:textSize="16sp" />
+
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"

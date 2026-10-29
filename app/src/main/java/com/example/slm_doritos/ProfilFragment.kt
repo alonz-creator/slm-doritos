@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.slm_doritos.databinding.FragmentProfilBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -34,6 +35,20 @@ class ProfilFragment : Fragment() {
         val sharedPref = requireContext().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
         val username = sharedPref.getString("username", "Member Alonz")
         binding.tvUsername.text = username
+
+        //Logika Toggle Switch
+        val isDarkMode = sharedPref.getBoolean("isDarkMode", false)
+        binding.switchDarkMode.isChecked = isDarkMode
+
+        binding.switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            sharedPref.edit().putBoolean("isDarkMode", isChecked).apply()
+
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
 
         // Tombol menuju Profil Developer
         binding.btnDevProfile.setOnClickListener {
