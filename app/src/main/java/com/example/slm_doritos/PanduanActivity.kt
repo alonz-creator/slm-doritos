@@ -5,6 +5,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.slm_doritos.databinding.ActivityPanduanBinding
 
+/**
+ * Pertemuan 11: Activity Onboarding Screen berbasis ViewPager2 & DotsIndicator
+ */
 class PanduanActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPanduanBinding
@@ -14,6 +17,7 @@ class PanduanActivity : AppCompatActivity() {
         binding = ActivityPanduanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 1. Inisialisasi Toolbar dengan Tombol Kembali (Back Navigation)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             title = "Panduan Member"
@@ -22,10 +26,12 @@ class PanduanActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
 
+        // 2. Inisialisasi daftar Fragment Onboarding dan PanduanFragmentAdapter
         val fragmentsList = listOf(Tutorial1Fragment(), Tutorial2Fragment(), Tutorial3Fragment())
         val adapter = PanduanFragmentAdapter(this, fragmentsList)
         binding.tutorialMessageViewPager.adapter = adapter
 
+        // 3. Menghubungkan DotsIndicator dengan ViewPager2
         binding.dotIndicator.attachTo(binding.tutorialMessageViewPager)
     }
 

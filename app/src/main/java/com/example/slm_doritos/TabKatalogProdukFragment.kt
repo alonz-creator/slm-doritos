@@ -9,11 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.slm_doritos.databinding.FragmentTabKatalogProdukBinding
 
+/**
+ * Pertemuan 11: Fragment pengelola RecyclerView Katalog Produk
+ */
 class TabKatalogProdukFragment : Fragment() {
 
     private var _binding: FragmentTabKatalogProdukBinding? = null
     private val binding get() = _binding!!
 
+    // Sumber data produk lokal (Product List)
     private val productList = listOf(
         ProductModel("Alonz Matte Pomade", "Rp 85.000", "https://picsum.photos/seed/pomade1/400/300"),
         ProductModel("Alonz Hair Wax Strong Hold", "Rp 75.000", "https://picsum.photos/seed/wax1/400/300"),
@@ -39,10 +43,12 @@ class TabKatalogProdukFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 1. Inisialisasi ProductAdapter dengan callback penanganan klik item
         val adapter = ProductAdapter(productList) { selectedItem ->
             Toast.makeText(requireContext(), "Anda memilih produk: ${selectedItem.name}", Toast.LENGTH_SHORT).show()
         }
 
+        // 2. Mengatur LayoutManager menjadi Grid 2 Kolom dan memasangkan Adapter ke RecyclerView
         binding.rvProducts.apply {
             layoutManager = GridLayoutManager(requireContext(), 2)
             this.adapter = adapter
