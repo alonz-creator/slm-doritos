@@ -9,12 +9,12 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/card_dark"
+        android:background="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Profil Pengguna"
-        app:titleTextColor="@color/gold_primary" />
+        app:titleTextColor="@android:color/white" />
 
     <ImageView
         android:id="@+id/imgAvatar"
