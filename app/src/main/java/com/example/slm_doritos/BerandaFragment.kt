@@ -119,9 +119,9 @@ class BerandaFragment : Fragment() {
                 Log.e("Info Menu", "Option Menu Search dipilih")
                 true
             }
-            R.id.action_settings -> {
-                Toast.makeText(requireContext(), "Settings Clicked", Toast.LENGTH_SHORT).show()
-                Log.e("Info Menu", "Option Menu Settings dipilih")
+            R.id.action_faq -> {
+                val intent = Intent(requireContext(), PanduanActivity::class.java)
+                startActivity(intent)
                 true
             }
             else -> super.onOptionsItemSelected(item)

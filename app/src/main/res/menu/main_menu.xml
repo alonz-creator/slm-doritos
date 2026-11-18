@@ -8,8 +8,8 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_settings"
-        android:icon="@drawable/ic_settings"
-        android:title="Pengaturan"
-        app:showAsAction="never" />
+        android:id="@+id/action_faq"
+        android:icon="@drawable/ic_info"
+        android:title="FAQ / Panduan"
+        app:showAsAction="always" />
 </menu>

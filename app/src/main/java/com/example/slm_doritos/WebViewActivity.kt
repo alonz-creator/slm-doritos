@@ -1,5 +1,6 @@
 package com.example.slm_doritos
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -70,8 +71,9 @@ class WebViewActivity : AppCompatActivity() {
                 Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.action_settings -> {
-                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show()
+            R.id.action_faq -> {
+                val intent = Intent(this, PanduanActivity::class.java)
+                startActivity(intent)
                 true
             }
             else -> super.onOptionsItemSelected(item)

@@ -41,6 +41,12 @@ class LayananFragment : Fragment() {
                 .commit()
         }
 
+        // Tombol Buka Katalog Produk & Tab (KatalogActivity)
+        binding.btnOpenTenth.setOnClickListener {
+            val intent = android.content.Intent(requireContext(), KatalogActivity::class.java)
+            startActivity(intent)
+        }
+
         // Selection Grid Card 1: Haircut
         binding.cardHaircut.setOnClickListener {
             selectedService = "Gentleman Haircut"
