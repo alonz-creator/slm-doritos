@@ -41,9 +41,9 @@ class LayananFragment : Fragment() {
                 .commit()
         }
 
-        // Tombol Buka Katalog Produk & Tab (KatalogActivity)
+        // Tombol Buka Tab Info & Produk (InfoProdukActivity)
         binding.btnOpenTenth.setOnClickListener {
-            val intent = android.content.Intent(requireContext(), KatalogActivity::class.java)
+            val intent = android.content.Intent(requireContext(), InfoProdukActivity::class.java)
             startActivity(intent)
         }
 

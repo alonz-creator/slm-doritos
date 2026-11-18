@@ -57,9 +57,9 @@
             android:name=".ProfilDevActivity"
             android:exported="false" />
 
-        <!-- Katalog Activity (TabLayout & ViewPager2) -->
+        <!-- Info & Produk Activity (TabLayout & ViewPager2) -->
         <activity
-            android:name=".KatalogActivity"
+            android:name=".InfoProdukActivity"
             android:exported="false" />
 
         <!-- Panduan Activity (Onboard Screen ViewPager2) -->

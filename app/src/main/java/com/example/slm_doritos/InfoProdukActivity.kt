@@ -4,16 +4,16 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.slm_doritos.databinding.ActivityKatalogBinding
+import com.example.slm_doritos.databinding.ActivityInfoProdukBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-class KatalogActivity : AppCompatActivity() {
+class InfoProdukActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityKatalogBinding
+    private lateinit var binding: ActivityInfoProdukBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityKatalogBinding.inflate(layoutInflater)
+        binding = ActivityInfoProdukBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
@@ -24,7 +24,7 @@ class KatalogActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
 
-        val tabsAdapter = KatalogTabsAdapter(this)
+        val tabsAdapter = InfoProdukTabsAdapter(this)
         binding.viewPager.adapter = tabsAdapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
